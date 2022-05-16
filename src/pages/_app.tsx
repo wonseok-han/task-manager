@@ -12,7 +12,7 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Seo />
       <ThemeProvider attribute="class">
-        <div className="bg-white dark:bg-gray-900 min-h-full layout-grid">
+        <div className="bg-white dark:bg-gray-800 min-h-full layout-grid">
           <Header />
           <Content>
             <Component {...pageProps} />
