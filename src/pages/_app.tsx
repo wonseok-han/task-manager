@@ -12,18 +12,18 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Seo />
       <ThemeProvider attribute="class">
-        <div className="bg-white dark:bg-gray-800 min-h-full layout-grid">
+        <div className="bg-white dark:bg-gray-700 min-h-full layout-grid min-w-full">
           <Header />
           <Content>
             <Component {...pageProps} />
           </Content>
-
-          <div className="theme-button-wrap">
-            <div className="theme-button-cell">
-              <ThemeSwitch />
-            </div>
-          </div>
         </div>
+
+        <footer>
+          <div className="theme-button-wrap">
+            <ThemeSwitch />
+          </div>
+        </footer>
       </ThemeProvider>
 
       <style jsx global>{`
@@ -42,17 +42,10 @@ function App({ Component, pageProps }: AppProps) {
         }
 
         .theme-button-wrap {
-          display: table;
-          width: 100%;
-          text-align: right;
-          cursor: pointer;
-          z-index: 999;
+          position: fixed;
+          left: 100%;
+          transform: translate(-100%, -100%);
           padding: 1rem;
-        }
-
-        .theme-button-cell {
-          display: table-cell;
-          vertical-align: bottom;
         }
       `}</style>
     </>

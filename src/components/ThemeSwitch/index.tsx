@@ -22,7 +22,7 @@ const ThemeSwitch = () => {
           onChange={handleChange}
           className={`${
             theme === "dark" ? "bg-blue-600" : "bg-gray-200"
-          } relative inline-flex h-10 w-32 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`}
+          } relative inline-flex h-10 w-32 z-50 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`}
         >
           <span
             className={`${
